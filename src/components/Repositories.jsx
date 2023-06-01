@@ -23,23 +23,16 @@ export default function Repositories() {
     <>
         {data.map(repo=>{
             return (
-                <Fragment
-                    key={repo.id}
-                >
+                <Fragment key={repo.id}>
                     <ul>
                         <li>
-                            <a
-                                href={repo.clone_url}>
-                                {repo.name}
-                            </a>
+                            <a href={repo.clone_url}>{repo.name}</a>
                         </li>
                     </ul>
                 </Fragment>
             )
         })}
-        <button type="button" onClick={refetch}>
-            Fetch again
-        </button>
+        <button type="button" onClick={refetch}>Fetch again</button>
     </>
     )
 };
